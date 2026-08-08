@@ -1,0 +1,14 @@
+.\objects\stream_buffer.o: third_lib\freertos\stream_buffer.c
+.\objects\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\FreeRTOS.h
+.\objects\stream_buffer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\stream_buffer.o: .\third_lib\freertos\portable\FreeRTOSConfig.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\projdefs.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\portable.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\deprecated_definitions.h
+.\objects\stream_buffer.o: .\third_lib\freertos\portable\portmacro.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\mpu_wrappers.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\task.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\list.h
+.\objects\stream_buffer.o: .\third_lib\freertos\include\stream_buffer.h
