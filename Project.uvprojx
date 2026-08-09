@@ -805,6 +805,26 @@
               <FilePath>.\Hardware\AHT20.h</FilePath>
             </File>
             <File>
+              <FileName>ESP32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\ESP32.c</FilePath>
+            </File>
+            <File>
+              <FileName>ESP32.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\ESP32.h</FilePath>
+            </File>
+            <File>
+              <FileName>WIFI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Hardware\WIFI.c</FilePath>
+            </File>
+            <File>
+              <FileName>WIFI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Hardware\WIFI.h</FilePath>
+            </File>
+            <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Hardware\usart.c</FilePath>

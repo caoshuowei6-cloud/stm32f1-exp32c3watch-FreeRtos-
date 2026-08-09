@@ -16,5 +16,8 @@ int Game(void);
 int Emoji(void);
 int Gradienter(void);
 extern uint8_t stop_watch_start;
+extern float Roll;
+extern float Pitch;
+extern float Yaw;
 
 #endif

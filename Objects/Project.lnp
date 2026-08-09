@@ -39,6 +39,8 @@
 ".\objects\dino.o"
 ".\objects\ad.o"
 ".\objects\aht20.o"
+".\objects\esp32.o"
+".\objects\wifi.o"
 ".\objects\usart.o"
 ".\objects\main.o"
 ".\objects\freertos_port.o"

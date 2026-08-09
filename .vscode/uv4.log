@@ -1,3 +1,3 @@
-Load "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\Objects\\Project.axf" 
+Load "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\Objects\\Project.axf" 
 Erase Done.Programming Done.Verify OK.Application running ...
-Flash Load finished at 12:19:19
+Flash Load finished at 11:59:41

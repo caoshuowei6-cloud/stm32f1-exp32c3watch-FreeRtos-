@@ -3,19 +3,19 @@
         {
             "name": "Target 1",
             "includePath": [
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\Start",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\Library",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\User",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\System",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\Hardware",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\third_lib\\freertos\\include",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\third_lib\\freertos\\portable",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\Start",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\Library",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\User",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\System",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\Hardware",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\third_lib\\freertos\\include",
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\third_lib\\freertos\\portable",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\arm_linux",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\arm_linux_compat",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\libcxx",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "c:\\Users\\LENOVO\\Desktop\\手表\\1- 10 电压检测与长按关机-my\\third_lib\\freertos"
+                "c:\\Users\\LENOVO\\Desktop\\手表\\stm32f1+esp32c3双mcu手表（freertos）\\third_lib\\freertos"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",

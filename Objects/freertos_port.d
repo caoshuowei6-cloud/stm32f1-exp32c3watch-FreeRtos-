@@ -44,3 +44,7 @@
 .\objects\freertos_port.o: .\Hardware\Key.h
 .\objects\freertos_port.o: .\Hardware\menu.h
 .\objects\freertos_port.o: .\Hardware\AHT20.h
+.\objects\freertos_port.o: .\Hardware\WIFI.h
+.\objects\freertos_port.o: .\Hardware\ESP32.h
+.\objects\freertos_port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\freertos_port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
