@@ -105,6 +105,8 @@ void Show_Clock_UI(void)
 	MyRTC_ReadTime();
 	OLED_Printf(0,0,OLED_6X8,"%d-%d-%d",MyRTC_Time[0],MyRTC_Time[1],MyRTC_Time[2]);
 	OLED_Printf(16,16,OLED_12X24,"%02d:%02d:%02d",MyRTC_Time[3],MyRTC_Time[4],MyRTC_Time[5]);
+	OLED_ShowString(0,40,"Steps:",OLED_6X8);
+	OLED_ShowNum(42,40,MPU6050_GetStepCount(),8,OLED_6X8);
 	OLED_ShowString(0,48,"≤Àµ•",OLED_8X16);
 	OLED_ShowString(96,48,"…Ë÷√",OLED_8X16);
 }
@@ -571,12 +573,28 @@ float a=0.9;
 
 
 #define GYRO_SCALE  16.4f
+#define ACCEL_SCALE 2048.0f /* MPU6050 is configured for +/-16 g. */
+#define STEP_PEAK_THRESHOLD_G 0.20f
+#define STEP_RESET_THRESHOLD_G 0.08f
+#define STEP_MIN_INTERVAL_MS 300
+
+static volatile uint32_t step_count;
+
+uint32_t MPU6050_GetStepCount(void)
+{
+	return step_count;
+}
 
 void MPU6050_Calculation(void)
 {
     static TickType_t last_tick = 0;
+    static TickType_t last_step_tick = 0;
+    static float gravity_magnitude = 1.0f;
+    static uint8_t step_armed = 1;
     TickType_t now;
     float dt;
+    float accel_magnitude;
+    float dynamic_accel;
 
     MPU6050_GetData(&ax, &ay, &az, &gx, &gy, &gz);
 
@@ -585,11 +603,29 @@ void MPU6050_Calculation(void)
     if(last_tick == 0)
     {
         last_tick = now;
+		accel_magnitude = sqrtf((float)ax * ax + (float)ay * ay + (float)az * az) / ACCEL_SCALE;
+		gravity_magnitude = accel_magnitude;
         return;
     }
 
     dt = (now - last_tick) * portTICK_PERIOD_MS / 1000.0f;
     last_tick = now;
+
+	/* Remove the slowly changing gravity component before detecting a step. */
+	accel_magnitude = sqrtf((float)ax * ax + (float)ay * ay + (float)az * az) / ACCEL_SCALE;
+	gravity_magnitude += 0.04f * (accel_magnitude - gravity_magnitude);
+	dynamic_accel = accel_magnitude - gravity_magnitude;
+	if(dynamic_accel < STEP_RESET_THRESHOLD_G)
+	{
+		step_armed = 1;
+	}
+	else if(step_armed && dynamic_accel >= STEP_PEAK_THRESHOLD_G &&
+	        (last_step_tick == 0 || (now - last_step_tick) >= pdMS_TO_TICKS(STEP_MIN_INTERVAL_MS)))
+	{
+		step_count++;
+		last_step_tick = now;
+		step_armed = 0;
+	}
 
     roll_g  = Roll  + ((float)gx / GYRO_SCALE) * dt;
     pitch_g = Pitch + ((float)gy / GYRO_SCALE) * dt;

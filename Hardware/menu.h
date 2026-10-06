@@ -9,6 +9,7 @@ int SettingPage(void);
 int Menu(void);
 void Watch_Start(void);
 void MPU6050_Calculation(void);
+uint32_t MPU6050_GetStepCount(void);
 int Stop_Watch(void);
 int MPU_6050(void);
 int AHT20_Page(void);
